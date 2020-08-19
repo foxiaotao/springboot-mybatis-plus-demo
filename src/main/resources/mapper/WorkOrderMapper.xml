@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sdgtt.mapper.auto.WorkOrderMapper">
+
+    <!-- 查找用户信息 -->
+    <select id="findAllUser" resultType="com.sdgtt.model.auto.WorkOrder">
+       select * from work_order limit 1000
+    </select>
+
+
+    <insert id="insertList" parameterType="java.util.List">
+        insert into work_order (work_order_id, user_name, phone, subject, from_channel, type1, type2, type3, priority, create_username, op_username, status, duration_times, duration, created_at, op_at, updated_at, remark)
+        values
+        <foreach collection="list" item="it" separator=",">
+            (#{it.workOrderId},#{it.userName},#{it.phone},#{it.subject},#{it.fromChannel},#{it.type1},#{it.type2},#{it.type3},#{it.priority},#{it.createUsername},#{it.opUsername},#{it.status},#{it.durationTimes},#{it.duration},#{it.createdAt},#{it.opAt},#{it.updatedAt},#{it.remark})
+        </foreach>
+    </insert>
+</mapper>
