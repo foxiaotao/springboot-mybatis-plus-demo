@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f172849-fe3e-49e8-8933-85fdc0ecebf2" name="Default Changelist" comment="" />
+    <list default="true" id="7f172849-fe3e-49e8-8933-85fdc0ecebf2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,18 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sdgtt/util/poi/ReaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sdgtt/util/poi/Reader.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/xiaoman/WorkOrderTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -120,6 +110,18 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="48">
+                <caret line="2" selection-start-line="2" selection-end-line="2" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -149,6 +151,9 @@
       <replace>},#{it.</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -177,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sdgtt/util/poi/XlsxReader.java" />
         <option value="$PROJECT_DIR$/src/test/xiaoman/WorkOrderInsertByPage.java" />
         <option value="$PROJECT_DIR$/src/test/xiaoman/WorkOrderTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -199,6 +205,7 @@
     <option name="width" value="1920" />
     <option name="height" value="943" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -211,144 +218,6 @@
             <path>
               <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sdgtt" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="poi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mybatis-demo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mybatis-demo2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaoman" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -566,7 +435,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597732215895</updated>
-      <workItem from="1597732217467" duration="19866000" />
+      <workItem from="1597732217467" duration="20516000" />
     </task>
     <servers />
   </component>
@@ -603,10 +472,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19866000" />
+    <option name="totallyTimeSpent" value="20516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-272" width="1920" height="943" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -614,10 +484,10 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.24973147" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24973147" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.3293124" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3293124" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3293124" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="3" />
@@ -941,6 +811,16 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="48">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
