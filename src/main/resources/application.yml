@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 58473
   servlet:
     context-path: /
 
@@ -9,6 +9,9 @@ spring:
     url: jdbc:mysql://172.17.5.8:32071/risk_control?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
     username: qa
     password: qatest
+#    url: jdbc:mysql://risk-control-db.quantgroups.com:6609/risk_control?useUnicode=true&characterEncoding=UTF8
+#    username: taotaorisk_control_pro
+#    password: taotaoKVfmb!w4pGtA@jrg
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8

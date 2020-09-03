@@ -46,7 +46,7 @@ public class GeneratorCodeConfig {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://172.17.5.8:32071/risk_control?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
+        dsc.setUrl("jdbc:mysql://172.17.5.5:32556/risk_control?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("qa");
         dsc.setPassword("qatest");

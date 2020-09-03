@@ -1,6 +1,6 @@
-package xiaoman;
+package com.sdgtt.controller;
 
-import com.sdgtt.DemoApplication;
+import com.sdgtt.core.JsonResult;
 import com.sdgtt.model.auto.WorkOrder;
 import com.sdgtt.model.workorder.WorkOrderStatus;
 import com.sdgtt.model.workorder.WorlOrderPriority;
@@ -9,15 +9,15 @@ import com.sdgtt.util.DateUtil;
 import com.sdgtt.util.poi.Reader;
 import com.sdgtt.util.poi.XlsxReader;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,32 +27,34 @@ import java.util.List;
  * @version 2020-08-14 16:28
  */
 @Slf4j
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class, webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ContextConfiguration()
-public class WorkOrderInsertByPage implements Reader {
+@RestController()
+@RequestMapping("wo")
+public class WorkOrderInsertController implements Reader {
 
     @Autowired
     private IWorkOrderService workOrderService;
+    @Autowired
+    private ApplicationArguments applicationArguments;
 
-//    private static final String filePath = "/Users/simon/Downloads/1.xlsx";
-    private static final String filePath = "/Users/simon/Downloads/work_order_created.xlsx";
+    private Date update = new Date();
 
-    private WorkOrder workOrder = null;
-    private WorlOrderPriority worlOrderPriority;
-    private WorkOrderStatus workOrderStatus;
-
-    private int pageSize = 5000;
+    private int pageSize = 500;
 
     private List<WorkOrder> list = new ArrayList<>(pageSize);
 
 
-    @Test
-    public void read() throws Exception {
+    @RequestMapping("insert")
+    public JsonResult read(String fileName) throws Exception {
+        // 从启动参数获取文件路径  jar运行
+        String[] sourceArgs = applicationArguments.getSourceArgs();
+        log.info("path={}", sourceArgs[0]);
+        String basePath = sourceArgs[0] + "/excel/" + fileName;
+        log.info("base_path={}", basePath);
 
         long start = System.currentTimeMillis();
         XlsxReader excelXlsxReader = new XlsxReader(this);
-        int totalRows = excelXlsxReader.process(filePath);
+
+        int totalRows = excelXlsxReader.process(basePath);
 
         if (!CollectionUtils.isEmpty(list)) {
             // 最后一页数据还没保存
@@ -62,7 +64,7 @@ public class WorkOrderInsertByPage implements Reader {
         int pages = (int)Math.ceil(totalRows / pageSize);
         log.info("加载总行数:{},总页数:{},耗时:{}", totalRows, pages, System.currentTimeMillis() - start);
 
-
+        return JsonResult.buildSuccessResult("success", null);
     }
 
     /**
@@ -75,7 +77,7 @@ public class WorkOrderInsertByPage implements Reader {
      */
     @Override
     public void read(String filePath, String sheetName, int sheetIndex, int curRow, List<String> cellList) {
-        workOrder = new WorkOrder();
+        WorkOrder workOrder = new WorkOrder();
         workOrder.setWorkOrderId(Long.valueOf(cellList.get(0)));
         workOrder.setDurationTimes(Integer.valueOf(cellList.get(1)));
         workOrder.setUserName(cellList.get(2));
@@ -85,22 +87,22 @@ public class WorkOrderInsertByPage implements Reader {
         workOrder.setType1(cellList.get(6));
         workOrder.setType2(cellList.get(7));
         workOrder.setType3(cellList.get(8));
-        worlOrderPriority = WorlOrderPriority.getWorlOrderPriority(cellList.get(9));
-        workOrder.setPriority(worlOrderPriority != null ? worlOrderPriority.ordinal() : null);
+        final WorlOrderPriority worlOrderPriority = WorlOrderPriority.getWorlOrderPriority(cellList.get(9));
+        workOrder.setPriority(worlOrderPriority != null ? worlOrderPriority.ordinal() : 0);
         workOrder.setCreateUsername(cellList.get(10));
         workOrder.setCreatedAt(DateUtil.dateStr2Date(cellList.get(11), DateUtil.DATE_FORMAT_1));
         workOrder.setOpUsername(cellList.get(12));
-        workOrder.setDuration(Integer.getInteger(cellList.get(13)));
-        workOrderStatus = WorkOrderStatus.getWorkOrderStatus(cellList.get(14));
-        workOrder.setStatus(workOrderStatus != null ? workOrderStatus.ordinal() : null);
+        workOrder.setDuration(Integer.valueOf(cellList.get(13)));
+        final WorkOrderStatus workOrderStatus = WorkOrderStatus.getWorkOrderStatus(cellList.get(14));
+        workOrder.setStatus(workOrderStatus != null ? workOrderStatus.ordinal() : 0);
         workOrder.setOpAt(DateUtil.dateStr2Date(cellList.get(15), DateUtil.DATE_FORMAT_1));
-        workOrder.setRemark(cellList.get(16));
+        workOrder.setUpdatedAt(update);
+        workOrder.setRemark(StringUtils.replaceAll(cellList.get(16), "'", ""));
         list.add(workOrder);
 
         // 前n页到达满页  或者 最后一条数据
 
         if ((curRow - 1) % pageSize == 0) {
-//            log.info("list.size={}，(curRow-1)={}", list.size(), curRow - 1);
             workOrderService.insertListOnePage(list);
             list.clear();
         }

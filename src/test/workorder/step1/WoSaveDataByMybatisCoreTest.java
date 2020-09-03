@@ -1,14 +1,9 @@
-package xiaoman;
+package workorder.step1;
 
 import com.sdgtt.DemoApplication;
-import com.sdgtt.model.workorder.WorkOrderStatus;
-import com.sdgtt.util.DateUtil;
 import com.sdgtt.util.JsonUtils;
 import com.sdgtt.model.auto.WorkOrder;
-import com.sdgtt.model.workorder.WorlOrderPriority;
 import com.sdgtt.service.IWorkOrderService;
-import com.sdgtt.util.poi.ReaderTest;
-import com.sdgtt.util.poi.ReaderTest2;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import workorder.step1.ReaderTest2;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 分页读取excel 保存到数据库
@@ -30,7 +25,7 @@ import java.util.stream.Collectors;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class, webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration()
-public class WorkOrderTest {
+public class WoSaveDataByMybatisCoreTest {
 
     @Autowired
     private IWorkOrderService workOrderService;

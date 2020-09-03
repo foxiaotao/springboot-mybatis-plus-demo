@@ -252,6 +252,7 @@ public class XlsxReader extends DefaultHandler {
         //获取单元格的位置，如A1,B1
         // String columnData = attributes.getValue("r");
 
+
         if ("b".equals(cellType)) { //处理布尔值
             nextDataType = CellDataType.BOOL;
         } else if ("e".equals(cellType)) {  //处理错误

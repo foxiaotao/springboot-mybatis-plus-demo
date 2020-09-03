@@ -61,5 +61,6 @@ public class WorkOrderServiceImpl extends ServiceImpl<WorkOrderMapper, WorkOrder
     @Override
     public void insertListOnePage(List<WorkOrder> orderList) {
         workOrderMapper.insertList(orderList);
+//        log.info("insert {} 条数据到mysql中", orderList.size());
     }
 }
