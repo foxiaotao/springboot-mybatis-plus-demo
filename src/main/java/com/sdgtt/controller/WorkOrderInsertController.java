@@ -38,7 +38,7 @@ public class WorkOrderInsertController implements Reader {
 
     private Date update = new Date();
 
-    private int pageSize = 500;
+    private int pageSize = 5000;
 
     private List<WorkOrder> list = new ArrayList<>(pageSize);
 
@@ -65,6 +65,15 @@ public class WorkOrderInsertController implements Reader {
         log.info("加载总行数:{},总页数:{},耗时:{}", totalRows, pages, System.currentTimeMillis() - start);
 
         return JsonResult.buildSuccessResult("success", null);
+    }
+
+    private void printTestData(List<WorkOrder> list, List<String> cellList) {
+        if (!CollectionUtils.isEmpty(cellList)) {
+            int last = list.size() - 1;
+            log.info("phone={},wid={},时间结果打印，createdTime={},upTime={}, cellList11={},cellList15={}", list.get(last).getPhone(), list.get(last).getWorkOrderId(),
+                    DateUtil.format(list.get(last).getCreatedAt(), DateUtil.DATE_FORMAT_1), DateUtil.format(list.get(last).getOpAt(), DateUtil.DATE_FORMAT_1),
+                    cellList.get(11), cellList.get(15));
+        }
     }
 
     /**
@@ -101,11 +110,12 @@ public class WorkOrderInsertController implements Reader {
         list.add(workOrder);
 
         // 前n页到达满页  或者 最后一条数据
-
         if ((curRow - 1) % pageSize == 0) {
+            printTestData(list, cellList);
             workOrderService.insertListOnePage(list);
             list.clear();
         }
+
 
     }
 
